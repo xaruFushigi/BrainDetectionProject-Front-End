@@ -1,0 +1,16 @@
+
+.brainDetect__logo_container{
+    background-image: linear-gradient(to right, rgb(255, 0, 225) , rgb(49, 9, 63));
+    background: transparent;
+}
+
+.braindDetect__logo{
+    margin: 4rem;
+    margin-top: 0;
+    
+}
+.Tilt{
+    max-width: 10%;
+    height: 100px;
+    border-radius: 100px;
+}

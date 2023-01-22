@@ -1,0 +1,36 @@
+.brainDetect__imageLinkForm-container{
+   font-size: 20px;
+   font-weight: bold;
+   display: flex;
+   flex-direction: column; 
+   align-items: center;
+   min-width: 100%;
+}
+
+.brainDetect__imageLinkForm-input{
+    border-radius: 11px;
+    border: transparent;
+    margin: 1rem;
+    padding: 5px;
+    width: 70%;
+    min-width: 60%;
+}
+
+.brainDetect__imageLinkForm-input-container{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    min-width: 50%;
+}
+
+.brainDetect__imageLinkForm-detect-button{
+    border-radius: 14px;
+    border: solid;
+    padding: 7px;
+    width: 30%;
+    font-weight: bold; 
+    background-image: linear-gradient(to right, rgb(68, 13, 87), rgb(255, 0, 225));  
+    cursor: pointer;
+    margin-right: 1rem;
+    min-width: 30%;
+}
