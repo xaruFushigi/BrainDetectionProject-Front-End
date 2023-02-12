@@ -1,0 +1,128 @@
+.brainDetect__navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brainDetect__navbar-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    max-width: 100%;
+    font-size: 20px;
+}
+
+.brainDetect__navbar-links p {
+    margin-left: 1rem;
+    position: relative;
+    text-align: end;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+.brainDetect__navigation-signOut {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    font-size: 20px;
+    padding: 1rem;
+    margin-top: 1rem;
+    outline: none;
+
+    max-width: 49%;
+}
+
+a:link{
+    color:rgb(29, 21, 21);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:visited{
+    color: rgb(4, 41, 4);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.brainDetect__navbar-menu svg {
+    cursor: pointer;
+}
+
+.brainDetect__navbar-menu {
+    margin-left: 1rem;
+
+    display: none;
+    position: relative;
+}
+
+.brainDetect__navbar-links_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.brainDetect__navbar-menu_container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+
+    text-align: end;
+    background: transparent;
+    padding: 1rem;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    margin-top: 0.5rem;
+    min-width: 210px;
+    border-radius: 5px;
+    box-shadow: 0 0 5 rgba(0,0,0,0.2);
+}
+
+.brainDetect__navbar-menu_container p {
+    margin: 1rem 0;
+}
+
+.brainDetect__navbar-menu_container-links-sign{
+    display: none;
+}
+/* tablet device compatible */
+@media screen and (max-width: 1050px) {
+    .brainDetect__navbar-links_container {
+        display: none;
+    }
+    .brainDetect__navbar-menu{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .brainDetect__navbar {
+        padding: 2rem 4rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .brainDetect__navbar {
+        padding: 2rem;
+    }
+
+    .brainDetect__navbar-sign {
+        display: none;
+    }
+
+    .brainDetect__navbar-menu_container {
+        top: 20px;
+    }
+
+    .brainDetect__navbar-menu_container-links-sign {
+        display: block;
+    }
+}
+
+
+
