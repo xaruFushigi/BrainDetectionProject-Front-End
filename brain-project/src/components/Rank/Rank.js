@@ -1,11 +1,21 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./rank.css";
 
-const Rank = () => {
+const Rank = (props) => {
+    const name = props.name;
+    const entries = props.entries;
+
     return(
-        <div className="brainDetect__rank-component-container">
-           <p> {'\n"Bokhodir" rank is #...'} </p>
-        </div>
+            <div>
+            {entries !== undefined ? (
+                <div className='white f3'>
+                {`${name}, your current entry count is...`}
+                <div className='white f1'>{entries}</div>
+                </div>
+            ) : (
+                <div>Loading...</div>
+            )}
+            </div>
     )
 };
 

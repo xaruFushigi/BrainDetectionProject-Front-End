@@ -1,14 +1,15 @@
 import React, {useState} from "react";
 import "./faceRecognition.css";
+import ParticlesBg from 'particles-bg';
 
 const FaceRecognition = (props) => {
     console.log(props.bounding_box.bottomRow)
     return(
-        <div className="brainDetect__faceRecognition-container ma2 pa2 flex itens-center justify-center  absolute">
-            <div>
+        <div className="w-100 center ml7 pl7">
+            <div className="absolute ml6">
                 <img src={props.IMAGE_URL} 
                      className="br3" 
-                     alt="image" 
+                     alt="" 
                      width={500} 
                      height="auto"
                      id="inputImage"
@@ -22,6 +23,8 @@ const FaceRecognition = (props) => {
                              right  : props.bounding_box.rightCol, 
                            }}
                 >
+                <ParticlesBg type='circle' bg={true} className="particles"/> {/* react particles library*/}
+
                 </div>
             </div>
         </div>
