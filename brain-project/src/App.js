@@ -97,21 +97,21 @@ useEffect(() => {
       ) 
   }
 //detect Button function on press
-  const submitFunction = () => {  //Detect Button function
+  const DetectButton = () => {  //Detect Button function
     calculateBox();                //implementing detected face's border
   }; 
 
 //input function of the inseterd image url
-const inputFunction = (event) => { 
+const InputFunction = (event) => { 
   const {value} = event.target; //destructuring 
   setInput(() => {return {inputValue : value}}); //returning url link in the input
 };
 //Sign In/Out form condition: after pressing the button goes to the second page                                                                          
-const SignInForm = () => {  
+const SignInButton = () => {  
   setSignInCondition(prevState => !prevState)
 };
 //after pressing button of SignUp goes to the second page
-const RegisterForm = () => {
+const RegisterLink = () => {
   setRegisterCondition(prevState => !prevState)
 };
  //to load user from database in the backend server
@@ -127,15 +127,15 @@ const loadUser = (data) => {
 
 return (
     <div className="App h-auto">      
-      <Navigation  signInButtonState={SignInForm} signInCondition={signInCondition }/>
+      <Navigation  SignInButton={SignInButton} />
       {
       signInCondition === false ?
       <div>
         <Logo />
         <Rank name={user.name} entries={user.entries} />
         <ImageLinkForm searchfield   ={input.inputValue} 
-                       inputFunction ={inputFunction   } 
-                       submitFunction={submitFunction  }
+                       InputFunction ={InputFunction   } 
+                       DetectButton  ={DetectButton  }
         />
         <FaceRecognition IMAGE_URL   ={input.inputValue} 
                          bounding_box={bounding_box}
@@ -143,9 +143,9 @@ return (
       </div>
       :
        (registerCondition === true ? 
-        <Register  registerButtonState={RegisterForm} loadUser={loadUser}/>
+        <Register  RegisterLink={RegisterLink} loadUser={loadUser}/>
         :
-        <SignIn  signInButtonState={SignInForm}  registerButtonState={RegisterForm} loadUser={loadUser}/>
+        <SignIn  SignInButton={SignInButton}  RegisterLink={RegisterLink} loadUser={loadUser}/>
       )
       }
       <ParticlesBg type='circle' bg={true} className="particles h-100"/> {/* react particles library*/}

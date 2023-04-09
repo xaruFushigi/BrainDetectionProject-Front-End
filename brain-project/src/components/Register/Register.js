@@ -38,7 +38,7 @@ class Register extends React.Component {
             .then(user => {
                 if(user.id) {
                     this.props.loadUser(user);
-                    this.props.registerButtonState();
+                    this.props.RegisterLink();
                 }
                 else {
                     alert("something went wrong");

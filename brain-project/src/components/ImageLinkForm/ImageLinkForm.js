@@ -14,7 +14,7 @@ const ImageLinkForm = (props) => {
                        />
                 
                 <button className="brainDetect__imageLinkForm-detect-button grow tc"
-                        onClick={props.submitFunction}
+                        onClick={props.DetectButton}
                 >
                     Detect
                 </button>

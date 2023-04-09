@@ -24,7 +24,7 @@ const Navigaiton = (props) => {
             { props.signInCondition === false ?
             <div className="brainDetect__navigation-signOut">
                 <p>
-                    <a href="#signOut" onClick={props.signInButtonState}> Sign Out </a>
+                    <a href="#signOut" onClick={props.SignInButton}> Sign Out </a>
                 </p>
             </div>
             :
